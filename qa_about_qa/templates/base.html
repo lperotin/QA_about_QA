@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="/media/css/style.css">
+    <title> {% block title %} My blog on QA {% endblock %}</title>
+</head>
+
+<tbody>
+<header> Q & A about QA</header>
+    <nav>
+        {% block nav %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!--- <li><a href="/blog">Blog</a></li> --->
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        {% endblock %}
+    </nav>
+    {% load static %}
+    <img src="{% static 'blog/QualityAssurance.jpeg' %}" alt="Mon image" />
+    <section id="content">
+        {% block content %}{% endblock %}
+    </section>
+    <footer>&copy; QA</footer>
+</tbody>
+</html>
