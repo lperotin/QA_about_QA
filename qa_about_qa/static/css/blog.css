@@ -1,0 +1,34 @@
+#navigationBar ul {
+ margin:0;
+ padding:0;
+ list-style-type:none;
+ text-align:center;
+ }
+#navigationBar li {
+ float:left;
+ margin:auto;
+ padding:0;
+ background-color:black;
+ }
+#navigationBar li a {
+ display:block;
+ width:100px;
+ color:white;
+ text-decoration:none;
+ padding:5px;
+ }
+#navigationBar li a:hover {
+ color:#FFD700;
+ }
+#navigationBar ul li ul {
+ display:none;
+ }
+#navigationBar ul li:hover ul {
+ display:block;
+ }
+#navigationBar ul li:hover ul li {
+ float:none;
+ }
+#navigationBar ul li ul {
+ postion:absolute
+}

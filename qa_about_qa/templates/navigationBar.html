@@ -1,7 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 {% block nav %}
+<div id="navigationBar">
 <ul>
     <li><a href="/">Home</a></li>
-    <!--- <li><a href="/blog">Blog</a></li> --->
+    <li><a href="#">Categories</a>
+        <ul>
+            {% for cat in categories %}
+                <li><a href="{% url 'view_articles_by_category' cat.name %}">{{ cat.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
     <li><a href="/contact">Contact</a></li>
 </ul>
+</div>
 {% endblock %}
