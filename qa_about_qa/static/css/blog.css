@@ -1,15 +1,33 @@
+header {
+ transform: translate(50%, 0%);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#navigationBar {
+ transform: translate(50%, 0%);
+ margin:10px 0px;
+}
 #navigationBar ul {
+ transform: translate(-50%, 0%);
+ display:inline-block;
  margin:0;
  padding:0;
  list-style-type:none;
  text-align:center;
+ position:absolute;
  }
 #navigationBar li {
  float:left;
  margin:auto;
  padding:0;
  background-color:black;
- }
+}
 #navigationBar li a {
  display:block;
  width:100px;
@@ -27,8 +45,26 @@
  display:block;
  }
 #navigationBar ul li:hover ul li {
+ transform: translate(50%, 0%);
  float:none;
  }
 #navigationBar ul li ul {
  postion:absolute
+}
+
+#content {
+    margin: 100px;
+}
+#container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.article {
+    margin: 5px auto;
+    width: 50%;
+    border: 3px solid red;
+    padding: 10px;
 }

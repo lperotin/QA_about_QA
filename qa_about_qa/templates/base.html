@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link rel="stylesheet" href="/media/css/style.css">
     <title> {% block title %} My blog on QA {% endblock %}</title>
 </head>
 
 <tbody>
 <header> Q & A about QA</header>
-    <nav>
-        {% include "navigationBar.html" %}
-    </nav>
     {% load static %}
     <img src="{% static 'blog/img/QualityAssurance.jpeg' %}" alt="Mon image" />
-    <section id="content">
+
+    <div>
+
+        <nav>
+            {% include "navigationBar.html" %}
+        </nav>
+    </div>
+    <div id="content">
         {% block content %}{% endblock %}
-    </section>
+    </div>
     <footer>&copy; QA</footer>
 </tbody>
 </html>
