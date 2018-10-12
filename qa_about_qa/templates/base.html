@@ -4,21 +4,15 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link rel="stylesheet" href="/media/css/style.css">
-    <title> {% block title %} My blog on QA {% endblock %}</title>
 </head>
 
 <tbody>
-<header> Q & A about QA</header>
-    {% load static %}
-    <img src="{% static 'blog/img/QualityAssurance.jpeg' %}" alt="Mon image" />
-
-    <div>
-
-        <nav>
-            {% include "navigationBar.html" %}
-        </nav>
-    </div>
-    <div id="content">
+<header></header>
+    <img src="{% static 'blog/img/qa_logo.png' %}" alt="QA logo" />
+    <nav>
+        {% include "navigationBar.html" %}
+    </nav>
+    <div class="col-container">
         {% block content %}{% endblock %}
     </div>
     <footer>&copy; QA</footer>
