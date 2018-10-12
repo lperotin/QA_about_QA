@@ -11,6 +11,7 @@ class Article(models.Model):
         default=timezone.now, verbose_name="date of publication"
     )
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
+    picture = models.ImageField(default="default.png") #, upload_to='articles'
 
     class Meta:
         verbose_name = "blog post"

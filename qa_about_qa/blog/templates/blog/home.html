@@ -1,11 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Welcome on the QA blog{% endblock %}
 {% block content %}
-<div id="container">
+<div class="col articles-list">
 
     {% for article in last_articles %}
         <div class="article">
-            <h3>{{ article.title }}</h3>
+            {% if article.picture %}
+                <img src="/img/{{ article.picture }}"/>
+            {% endif %}
+            <h2>{{ article.title }}</h2>
             <p>{{ article.content|truncatewords_html:80 }}</p>
             <p><a href="{% url 'view_article' article.slug %}">Lire la suite</a></p>
         </div>

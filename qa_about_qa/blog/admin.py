@@ -27,7 +27,7 @@ class ArticleAdmin(admin.ModelAdmin):
             "Article content",
             {
                 "description": "The form accepts HTML",
-                "fields": ("content",),
+                "fields": ("content", "picture"),
             },
         ),
     )
