@@ -7,9 +7,11 @@
             {% if article.picture %}
                 <img src="/img/{{ article.picture }}"/>
             {% endif %}
-            <h2>{{ article.title }}</h2>
-            <p>{{ article.content|truncatewords_html:80 }}</p>
-            <p><a href="{% url 'view_article' article.slug %}">Lire la suite</a></p>
+            <div class="articleContent">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.content|truncatewords_html:80 }}</p>
+                <p><a href="{% url 'view_article' article.slug %}">Lire la suite</a></p>
+            </div>
         </div>
     {% empty %}
         <p>Aucun article.</p>
@@ -19,7 +21,14 @@
     <h2>How to deal with your tests ?</h2>
     <p>An interesting text about how to test</p>
 
-    <h2>Me and myself</h2>
-    <p>A small text about me, how fantastic I am, etc...</p>
+    <div class="presentation">
+        {% load static %}
+        <img src="{% static 'blog/img/me.jpg' %}" alt="myPicture" />
+        <div class="presentation-text">
+            <h2>Me and myself</h2>
+            <p>A small text about me, how fantastic I am, etc...</p>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

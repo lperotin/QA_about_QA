@@ -8,10 +8,15 @@
 
 <tbody>
 <header></header>
-    <img src="{% static 'blog/img/qa_logo.png' %}" alt="QA logo" />
+    <a href="/">
+        <img src="{% static 'blog/img/qa_about_qa_logo.png' %}" alt="QA logo" />
+    </a>
     <nav>
         {% include "navigationBar.html" %}
     </nav>
+    <div class="title">
+        <img src="{% static 'blog/img/qa_about_qa_full.png' %}" alt="QA logo" />
+    </div>
     <div class="col-container">
         {% block content %}{% endblock %}
     </div>
