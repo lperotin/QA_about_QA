@@ -10,7 +10,7 @@ header {
  transform: translate(50%, 0%);
 }
 
-img {
+.homeButton img {
     display: block;
     width: 15%;
     height: 15%;
@@ -100,6 +100,9 @@ img {
     width:250px;
     height:100%;
 }
+#infos-and-tools .infos {
+    margin: 10px;
+}
 #infos-and-tools h2 {
     color: var(--main-theme-color);
 }
@@ -115,8 +118,8 @@ img {
     border: 1px solid var(--main-theme-color);
 }
 .presentation img {
-    margin: 5px;
-    width:250px;
+    margin: 10px;
+    width:230px;
 }
 .presentation .presentation-text {
     margin: 5px;

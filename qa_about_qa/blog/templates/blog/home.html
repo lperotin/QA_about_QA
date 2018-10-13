@@ -18,12 +18,16 @@
     {% endfor %}
 </div>
 <div class="col" id="infos-and-tools">
-    <h2>How to deal with your tests ?</h2>
-    <p>An interesting text about how to test</p>
+    <div class="infos">
+        <h2>How to deal with your tests ?</h2>
+        <p>An interesting text about how to test</p>
+    </div>
 
     <div class="presentation">
         {% load static %}
-        <img src="{% static 'blog/img/me.jpg' %}" alt="myPicture" />
+        <div class="picture">
+            <img src="{% static 'blog/img/me.jpg' %}" alt="myPicture" />
+        </div>
         <div class="presentation-text">
             <h2>Me and myself</h2>
             <p>A small text about me, how fantastic I am, etc...</p>
